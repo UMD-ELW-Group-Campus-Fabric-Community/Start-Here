@@ -36,6 +36,24 @@ sudo docker-compose up [--build]
 # Connect to Docker image
 sudo docker exec -it [image id] bash
 ```
+## Connect to Postgres
+```bash
+# Connect
+psql -U[user] [database]
+```
+## Postgres Commands
+```bash
+# List All
+\d
+# List Tables
+\dt
+# SQL Command: Example 1
+SELECT * FROM table;
+# SQL Command: Example 2
+INSERT INTO table (column1, column2, ...)
+VALUE (value1, value2, ...);
+```
+
 ## Cleaning up your Docker mess!
 ```bash
 # Prune EVERYTHING!
