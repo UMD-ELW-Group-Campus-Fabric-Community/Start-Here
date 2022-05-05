@@ -1,34 +1,47 @@
+# Quick Commands
+This document servers as a list of common commands for interacting with the AWS EC2 instance and Docker
 
-## Remote connect
-
-ssh -i docker-students.pem ubuntu@18.234.199.79
-ssh -i docker-students.pem ubuntu@3.215.148.52
-
-## 
+## Remote Connect
+```bash
+ssh -i [path/to/pem] ubuntu@[address]
+```
+## Cloning Repositories 
+```bash
+# Clone Databse
 git clone https://github.com/UMD-ELW-Group-Campus-Fabric-Community/Database-1.git
+# Clone Website
+git clone https://github.com/UMD-ELW-Group-Campus-Fabric-Community/Website.git
+```
 
-mkdir envfiles && cd $_
+## Configuring ~.env files
+```bash
+cd /path/to/env
+vm [~.env file]
+```
 
-touch db.dev.env
----
-POSTGRES_USER=admin
-POSTGRES_PASSWORD=INST490@Group16
-POSTGRES_DB=wcfc_db
----
-
-touch server.dev.env
----
-DB_HOST=coop_db
-DB_PORT=5432
-DB_USER=admin
-DB_PASS=INST490@Group16
-DB_NAME=wcfc_db
----
-
-sudo lsof -i :80
+## Kill existing process
+```bash
+sudo lsof -i :[port]
 sudo kill <pid>
-sudo yarn build
-sudo screen yarn start
+```
 
---- dont forget to clean up old images! 
+## Basic Docker commands
+```bash
+# List all running containers/images
+sudo docker ps
+# Shutdown and remove all images, only if docker-compose.yml exist
+sudo docker-compose down
+# Start all images, only if docker-compose/yml exist
+sudo docker-compose up [--build]
+# Connect to Docker image
+sudo docker exec -it [image id] bash
+```
+## Cleaning up your Docker mess!
+```bash
+# Prune EVERYTHING!
 sudo docker sytsem prune
+# Prune Images
+sudo docker image prune
+# Remove specifc Image
+sudo docker rmi -a [image id]
+```
