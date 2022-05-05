@@ -44,7 +44,7 @@ There are a few steps to deploying the application.
     ssh -i [path to pem] ubuntu@[address to instance]
 
     # Example 
-    ssh -i docker-students.pem ubuntu@3.215.148.52
+    ssh -i docker-students.pem ubuntu@1.234.567.89X
     ```
 
 2. Stopping the existing services on the instance. After ssh'ing into the instance, you will need to run the following commands in order to free up the processes running.
