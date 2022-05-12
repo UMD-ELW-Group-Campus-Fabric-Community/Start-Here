@@ -113,3 +113,24 @@ sudo docker image prune
 
 When running `yarn start`, you may encounter an issue of "address already in use." You will need to follow [Step 2](#deployment) under Deployment.
 
+# Endpoints Overview
+The following are available endpoints available on the website. The experimental endpoints are accessable but have additional bugs that will need to be resolved to become accessable.
+
+### - Home Page - Main page when viewing the website
+
+### - Article/[Article Name] - Current news and events that are accessible to the public
+
+### - Program/[Program Name] - An overview of the programs available to the public
+
+### - Inquiry - Central point for submitting a request to the database
+
+### - Signin (Experimental - Low priority) - Current not functioning. Manages the login process for a user to access Login-required pages. Uses Redux to manage user state, issue with redirect and validating credentials. May become depricated when roling in CAS Authentication.
+
+### - Content/Authentication HOC (Experimental - Moderate) - Currently functioning as inticipated. Users will not have access to a given page if not signed in.
+
+# Deliverables Overview
+- Figma Design
+- Website Documents
+- Database
+- AWS EC2 Deployment Process/Live View
+- Instructional Guide
